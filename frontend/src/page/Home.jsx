@@ -8,6 +8,7 @@ import {
   Github,
   Linkedin,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
       <section className="bg-gray-900 dark:bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
           {/* Alert Badge */}
-          <a
+          <Link
             href="#"
             role="alert"
             className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full 
@@ -28,7 +29,7 @@ function Home() {
               Apply for Ration Card Now
             </span>
             <ChevronRight className="ml-2 w-5 h-5" />
-          </a>
+          </Link>
 
           {/* Title */}
           <h1

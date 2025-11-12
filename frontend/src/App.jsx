@@ -4,6 +4,7 @@ import Applayout from "./components/layout/Applayout";
 import Home from "./page/Home";
 import Login from "./page/Login";
 import Signup from "./page/Signup";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,7 +29,12 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      <Toaster />
+    </>
+  );
 }
 
 export default App;
