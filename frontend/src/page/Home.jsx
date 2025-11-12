@@ -15,7 +15,6 @@ function Home() {
     <>
       <section className="bg-gray-900 dark:bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-          {/* Alert Badge */}
           <Link
             href="#"
             role="alert"
@@ -31,7 +30,6 @@ function Home() {
             <ChevronRight className="ml-2 w-5 h-5" />
           </Link>
 
-          {/* Title */}
           <h1
             className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 
           md:text-5xl lg:text-6xl dark:text-white"
@@ -39,7 +37,6 @@ function Home() {
             Ensuring Food Security for Every Bengali Family
           </h1>
 
-          {/* Subtitle */}
           <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
             The Department of Food & Supplies, Government of West Bengal, is
             committed to providing affordable and nutritious food grains through
@@ -72,13 +69,11 @@ function Home() {
             </a>
           </div>
 
-          {/* Logos Section */}
           <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
             <span className="font-semibold text-gray-400 uppercase">
               KEY INITIATIVES
             </span>
             <div className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
-              {/* Example Lucide brand icons adapted for government context */}
               <a
                 href="#"
                 className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
