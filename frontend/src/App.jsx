@@ -5,6 +5,7 @@ import Home from "./page/Home";
 import Login from "./page/Login";
 import Signup from "./page/Signup";
 import { Toaster } from "react-hot-toast";
+import PathRoutingPage from "./page/PathRouthing";
 
 function App() {
   const router = createBrowserRouter([
@@ -24,6 +25,10 @@ function App() {
         {
           path: "/signup",
           element: <Signup />,
+        },
+        {
+          path: "/routhing",
+          element: <PathRoutingPage />,
         },
       ],
     },
