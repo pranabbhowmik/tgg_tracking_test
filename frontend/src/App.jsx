@@ -7,12 +7,22 @@ import Signup from "./page/Signup";
 import { Toaster } from "react-hot-toast";
 import ShortestPathFinder from "./components/ShortestPathFinder";
 import PathRoutingPage from "./page/PathRouthing";
+import { useState } from "react";
 
 function App() {
+    const [isLoggedIn, setIsLoggedIn] = useState(
+        () => !!localStorage.getItem("token")
+    );
+
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <Applayout />,
+            element: (
+                <Applayout
+                    isLoggedIn={isLoggedIn}
+                    setIsLoggedIn={setIsLoggedIn}
+                />
+            ),
             // errorElement: <Error />,
             children: [
                 {
@@ -21,11 +31,11 @@ function App() {
                 },
                 {
                     path: "/login",
-                    element: <Login />,
+                    element: <Login setIsLoggedIn={setIsLoggedIn} />,
                 },
                 {
                     path: "/signup",
-                    element: <Signup />,
+                    element: <Signup setIsLoggedIn={setIsLoggedIn} />,
                 },
                 {
                     path: "/map-route-finder",
@@ -37,7 +47,6 @@ function App() {
                 },
             ],
         },
-    
     ]);
 
     return (
