@@ -6,6 +6,7 @@ import Login from "./page/Login";
 import Signup from "./page/Signup";
 import { Toaster } from "react-hot-toast";
 import ShortestPathFinder from "./components/ShortestPathFinder";
+import PathRoutingPage from "./page/PathRouthing";
 
 function App() {
     const router = createBrowserRouter([
@@ -30,8 +31,13 @@ function App() {
                     path: "/map-route-finder",
                     element: <ShortestPathFinder />,
                 },
+                {
+                    path: "/routhing",
+                    element: <PathRoutingPage />,
+                },
             ],
         },
+    
     ]);
 
     return (
