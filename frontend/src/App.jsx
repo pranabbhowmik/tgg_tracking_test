@@ -5,36 +5,41 @@ import Home from "./page/Home";
 import Login from "./page/Login";
 import Signup from "./page/Signup";
 import { Toaster } from "react-hot-toast";
+import ShortestPathFinder from "./components/ShortestPathFinder";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Applayout />,
-      // errorElement: <Error />,
-      children: [
+    const router = createBrowserRouter([
         {
-          path: "/",
-          element: <Home />,
+            path: "/",
+            element: <Applayout />,
+            // errorElement: <Error />,
+            children: [
+                {
+                    path: "/",
+                    element: <Home />,
+                },
+                {
+                    path: "/login",
+                    element: <Login />,
+                },
+                {
+                    path: "/signup",
+                    element: <Signup />,
+                },
+                {
+                    path: "/map-route-finder",
+                    element: <ShortestPathFinder />,
+                },
+            ],
         },
-        {
-          path: "/login",
-          element: <Login />,
-        },
-        {
-          path: "/signup",
-          element: <Signup />,
-        },
-      ],
-    },
-  ]);
+    ]);
 
-  return (
-    <>
-      <RouterProvider router={router} />
-      <Toaster />
-    </>
-  );
+    return (
+        <>
+            <RouterProvider router={router} />
+            <Toaster />
+        </>
+    );
 }
 
 export default App;
